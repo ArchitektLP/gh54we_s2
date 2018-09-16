@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$translucent" 1
+	"$baseTexture" "detail\DODSdetailsprites"
+	"$nocull" 1
+	"$vertexcolor" 1
+	"$vertexalpha" 1
+}

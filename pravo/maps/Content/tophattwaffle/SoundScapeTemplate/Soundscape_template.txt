@@ -1,0 +1,113 @@
+// DSP Effects. A full list of effects can be found in scripts/dsp_presets.txt. The ID is under "ptype". To hear a preview go in game and type: room_type ID# to hear the sound.
+// 0 : "Normal (off)"
+// 1 : "Generic"
+// 2 : "Metal Small"
+// 3 : "Metal Medium"
+// 4 : "Metal Large"
+// 5 : "Tunnel Small"
+// 6 : "Tunnel Medium"
+// 7 : "Tunnel Large"
+// 8 : "Chamber Small"
+// 9 : "Chamber Medium"
+// 10: "Chamber Large"
+// 11: "Bright Small"
+// 12: "Bright Medium"
+// 13: "Bright Large"
+// 14: "Water 1"
+// 15: "Water 2"
+// 16: "Water 3"
+// 17: "Concrete Small"
+// 18: "Concrete Medium"
+// 19: "Concrete Large"
+// 20: "Big 1"
+// 21: "Big 2"
+// 22: "Big 3"
+// 23: "Cavern Small"
+// 24: "Cavern Medium"
+// 25: "Cavern Large"
+// 26: "Weirdo 1"
+// 27: "Weirdo 2"
+// 28: "Weirdo 3"
+// Sound Levels. The sound's attenuation; how fast it drops away. The engine starts running into trouble below 60dB. This is needed for a positional sound.
+//	SNDLVL_NONE		= 0, Everywhere
+//	SNDLVL_20dB		= 20, Rustling leaves
+//	SNDLVL_25dB		= 25, Whispering
+//	SNDLVL_30dB		= 30, Library
+//	SNDLVL_45dB		= 45, Refrigerator, Transformer
+//	SNDLVL_50dB		= 50, Average home, Fluorescent light
+//	SNDLVL_55dB		= 55, 
+//	SNDLVL_IDLE		= 60, Normal conversation, cloths in dryer
+//	SNDLVL_TALKING	= 60, VALVe's choosen voice level
+//	SNDLVL_60dB		= 60,
+//	SNDLVL_65dB		= 65, Washing machine, dishwasher
+//	SNDLVL_STATIC	= 66,
+//	SNDLVL_70dB		= 70, Car, vacuum cleaner, mixer, electric sewing machine
+//	SNDLVL_NORM		= 75, Busy traffic
+//	SNDLVL_80dB		= 80, Mini-bike, alarm clock, noisy restaurant, office tabulator, outboard motor, passing snowmobile
+//	SNDLVL_85dB		= 85, Average factory, electric shaver
+//	SNDLVL_90dB		= 90, Screaming child, passing motorcycle, convertible ride on freeway
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100, Subway train, diesel truck, woodworking shop, pneumatic drill, boiler shop, jackhammer
+//	SNDLVL_105dB	= 105, Helicopter, power mower4
+//	SNDLVL_110dB	= 110, Snowmobile (drivers seat), inboard motorboat, sandblasting
+//	SNDLVL_120dB	= 120, Car horn, propeller aircraft
+//	SNDLVL_130dB	= 130, Air raid siren
+//	SNDLVL_GUNFIRE	= 140, Threshold of pain, gunshot, jet engine
+//	SNDLVL_140dB	= 140,
+//	SNDLVL_150dB	= 150,	
+//	SNDLVL_180dB	= 180, Rocket launching
+"example.soundscape" //This is the soundscape name, it can be anything. The standard naming is [map].[location]
+{
+	"dsp"	"1" //Can be any number value. This is the DSP effect, it's not needed but can be used to change the sound of a room. (Echos, sound dampning, ect..)
+	"dsp_volume" "1" //0-1 can be decimals. 
+	
+	"playlooping" //This is a rule for playing sounds. These are pretty self explanatory. 
+	{
+		"volume"		".15" //0-1 can be decimals. 
+		"pitch"		"100" // 0-255, cannot be decimals. This alters the pitch of the sound. 100 is the normal pitch. Useful values are 80-120
+		"wave"		"tophatt/waffle/sound.wav" // Sound file to be played, should have cues in it for looping.
+	}
+	"playrandom" //This is a rule for playing sounds using a random time.
+	{
+		"time"		"15,40" //This is the time boundreies in which to play the sound. [min],[max]
+		"volume"	".05,.1" //This is just like the above volume, but it will choose a random volume when told to play.
+		"pitch"		"85,90" //Just like a normal pitch, but will choose a random pitch within the defined bounds. This is useful for making sounds apper different when they are the same
+		"rndwave" //This is used with the "playrandom" rule and will choose a random wav from the list below everytime it is told to play
+		{
+		"wave"		"tophatt/waffle/sound1.wav"
+		"wave"		"tophatt/waffle/sound2.wav"
+		}
+	}
+	"playrandom"
+	{
+		"time"		"10,22"
+		"volume"		".2,.3"
+		"pitch"		"80,100"
+		"soundlevel" "SNDLVL_80dB"//This changes the volume, and falloff speed for the sounds. You don't have to hassle with this if you don't want too.
+		"position" "0" //can be 0-7 no doubles. This is where you choose the position of a sound for when placing sounds in hammer. If position is not defined it will be played as ambient
+		"rndwave"
+		{
+			"wave"	"tophatt/waffle/sound1.wav"
+			"wave"	"tophatt/waffle/sound2.wav"
+			"wave"	"tophatt/waffle/sound3.wav"
+		}
+	}
+	"playsoundscape"//This is a rule that allows you to play an entire soundscape inside of a sound scape. Yo dawg. Any DSP effects are ignored.
+	{
+		"name" "example.soundscape.cave" //This is the name of the soundscape to play
+		"volume" "0.5" //When used with a "subscape" it will set all of the sounds inside of the soundscape to %50
+		"positionoverride" "1" //Forces all positioned sounds in the sub-scape to emit from one location
+		"ambientpositionoverride "2" //Forces all unpositioned (i.e. ambient) sounds in the sub-scape to emit from one location
+	}
+	"playrandom"
+	{
+		"time"		"10,22"
+		"rndwave"
+		"position" "random" //This will make the sound play from a random spot near the player. Useful for birds, inscets, or spooky sounds.
+		{
+			"wave"	"tophatt/waffle/sound1.wav"
+			"wave"	"tophatt/waffle/sound2.wav"
+			"wave"	"tophatt/waffle/sound3.wav"
+		}
+	}
+}

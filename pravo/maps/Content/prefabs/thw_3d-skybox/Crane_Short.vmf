@@ -1,0 +1,94 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "4037"
+	"mapversion" "1"
+	"formatversion" "100"
+	"prefab" "1"
+}
+world
+{
+	"id" "1420"
+	"mapversion" "1"
+	"classname" "worldspawn"
+	"skyname" "sky_day01_01"
+	"maxpropscreenwidth" "-1"
+	"detailvbsp" "detail.vbsp"
+	"detailmaterial" "detail/detailsprites"
+	solid
+	{
+		"id" "1421"
+		side
+		{
+			"id" "1869"
+			"plane" "(293.898 -255 -52) (293.898 -255 84) (293.898 -435 84)"
+			"material" "CS_ASSAULT/ASSAULT_SKYBOX_BUILDING03"
+			"uaxis" "[0 1 0 218.873] 0.35"
+			"vaxis" "[0 0 -1 239.999] 0.35"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "1868"
+			"plane" "(301.898 -435 -52) (301.898 -435 84) (301.898 -255 84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 -63.6289] 0.015625"
+			"vaxis" "[0 0 -1 0] 0.015625"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "1867"
+			"plane" "(293.898 -435 -52) (293.898 -435 84) (301.898 -435 84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[-1 0 0 -7.90015] 0.02"
+			"vaxis" "[0 0 -1 56] 0.02"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "1866"
+			"plane" "(301.898 -255 -52) (301.898 -255 84) (293.898 -255 84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 17.6315] 0.25"
+			"vaxis" "[0 0 -1 32] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "1865"
+			"plane" "(301.898 -435 -52) (301.898 -255 -52) (293.898 -255 -52)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 6.10474] 0.015625"
+			"vaxis" "[0 -1 0 63.6289] 0.015625"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "1864"
+			"plane" "(301.898 -255 84) (301.898 -435 84) (293.898 -435 84)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 6.10474] 0.015625"
+			"vaxis" "[0 -1 0 63.6289] 0.015625"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 123 228"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+}

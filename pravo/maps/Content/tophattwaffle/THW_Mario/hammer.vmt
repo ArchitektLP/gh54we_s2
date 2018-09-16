@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "THW_Mario/hammer"
+	"$surfaceprop" "Metal"
+	"$translucent" 1
+}

@@ -1,0 +1,2 @@
+no_decomp 1, add to any info_target in the level.
+tools/locked, create a texture named this then place it anywhere in your level.

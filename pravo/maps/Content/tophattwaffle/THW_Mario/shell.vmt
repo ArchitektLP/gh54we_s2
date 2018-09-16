@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "THW_Mario/shell"
+	"$surfaceprop" "Concrete"
+	"$translucent" 1
+}

@@ -1,0 +1,41 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "4037"
+	"mapversion" "1"
+	"formatversion" "100"
+	"prefab" "1"
+}
+world
+{
+	"id" "710"
+	"mapversion" "1"
+	"classname" "worldspawn"
+	"skyname" "sky_day01_01"
+	"maxpropscreenwidth" "-1"
+	"detailvbsp" "detail.vbsp"
+	"detailmaterial" "detail/detailsprites"
+}
+entity
+{
+	"id" "711"
+	"classname" "sky_camera"
+	"fogend" "25000"
+	"fogstart" "200"
+	"fogdir" "1 0 0"
+	"fogcolor2" "255 255 255"
+	"fogcolor" "136 158 166"
+	"use_angles" "0"
+	"fogblend" "0"
+	"fogenable" "1"
+	"scale" "16"
+	"angles" "0 0 0"
+	"origin" "-249.585 -81.0667 289"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 7000]"
+	}
+}

@@ -1,0 +1,66 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "4037"
+	"mapversion" "2"
+	"formatversion" "100"
+	"prefab" "1"
+}
+world
+{
+	"id" "10995"
+	"mapversion" "2"
+	"classname" "worldspawn"
+	"skyname" "sky_day01_01"
+	"maxpropscreenwidth" "-1"
+	"detailvbsp" "detail.vbsp"
+	"detailmaterial" "detail/detailsprites"
+}
+entity
+{
+	"id" "10996"
+	"classname" "prop_static"
+	"angles" "0 90 0"
+	"skin" "0"
+	"fademindist" "0.0"
+	"fademaxdist" "0.0"
+	"solid" "0"
+	"model" "models/props_canal/refinery_03_skybox.mdl"
+	"fadescale" "1"
+	"origin" "12715.6 6014.01 -430"
+	editor
+	{
+		"color" "255 255 0"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[-12768 -8768]"
+	}
+}
+entity
+{
+	"id" "11000"
+	"classname" "env_smokestack"
+	"twist" "5"
+	"WindSpeed" "2"
+	"WindAngle" "25"
+	"InitialState" "1"
+	"renderamt" "50"
+	"rendercolor" "88 78 56"
+	"SmokeMaterial" "particle/SmokeStack.vmt"
+	"JetLength" "90"
+	"Rate" "10"
+	"EndSize" "30"
+	"StartSize" "20"
+	"Speed" "8"
+	"SpreadSpeed" "10"
+	"BaseSpread" "10"
+	"angles" "0 0 0"
+	"origin" "12764 5980 -290"
+	editor
+	{
+		"color" "255 255 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[2000 10500]"
+	}
+}

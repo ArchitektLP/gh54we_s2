@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "THW_Mario/flower"
+	"$surfaceprop" "Grass"
+	"$translucent" 1
+}

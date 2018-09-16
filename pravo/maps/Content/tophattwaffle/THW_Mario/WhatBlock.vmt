@@ -1,0 +1,13 @@
+"LightmappedGeneric"
+{
+   "$basetexture" "THW_Mario/whatblock"
+   "Proxies"
+   {
+      "AnimatedTexture"
+      {
+         "animatedtexturevar" "$basetexture"
+         "animatedtextureframenumvar" "$frame"
+         "animatedtextureframerate" "2"
+      }
+   }
+}
